@@ -8,4 +8,4 @@
 #### 5️⃣ Zero Division Error: It's designed to catch math errors, like dividing by zero.
 
 ### This project was crafted using a layered model approach, dividing the functionality into layers - HAL (LCD and Keypad), MCAL (GPIO).
-### With static configuration, I developed all drivers (LCD, keypad, GPIO) and created header files from scratch. I'm not done with my diploma yet, but I'm learning and growing every day.
+### With static configuration, I developed all drivers (LCD, keypad, GPIO) and created header files from scratch.
