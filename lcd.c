@@ -92,15 +92,15 @@ void LCD_init(void){
 	GPIO_setupPinDirection(E_PORT_ID,E_PIN_ID,PIN_OUTPUT);
 #if (LCD_DATA_BITS_MODE==8)
 	GPIO_setupPortDirection(DATA_PORT_ID,PORT_OUTPUT);
-	_delay_ms(20); /*الوقت الي بتاخده ال ال سي دي عشان تبدأتشتغل*/
+	_delay_ms(20);
 	LCD_sendCommand(FUNC_8BIT_2LINE);
 #elif(LCD_DATA_BITS_MODE==4)
 	GPIO_setupPinDirection(DATA_PORT_ID,FIRST_DATA_PIN,PIN_OUTPUT);
 	GPIO_setupPinDirection(DATA_PORT_ID,SECONED_DATA_PIN,PIN_OUTPUT);
 	GPIO_setupPinDirection(DATA_PORT_ID,THIRD_DATA_PIN,PIN_OUTPUT);
 	GPIO_setupPinDirection(DATA_PORT_ID,FOURTH_DATA_PIN,PIN_OUTPUT);
-	LCD_sendCommand(LCD_TWO_LINES_FOUR_BITS_MODE_INIT1); /*الداتا شيت بتقول كدا*/
-	LCD_sendCommand( LCD_TWO_LINES_FOUR_BITS_MODE_INIT2); /*الداتا شيت بتقول كدا*/
+	LCD_sendCommand(LCD_TWO_LINES_FOUR_BITS_MODE_INIT1);
+	LCD_sendCommand( LCD_TWO_LINES_FOUR_BITS_MODE_INIT2); 
 	LCD_sendCommand(FUNC_4BIT_2LINE);
 #endif
 
@@ -134,7 +134,7 @@ void LCD_moveCursor(uint8 row ,uint8 col){
 		address=col+0x50;
 		break;
 	}
-	position= (address | (1<<7));/*عشان اقول للكرسور اتحرك علي المكان ده دايما بخلي البيت التامنة بواحد وكدا كدا الادريس عندي سبعة بيت بس*/
+	position= (address | (1<<7));
 	LCD_sendCommand(position);
 }
 
