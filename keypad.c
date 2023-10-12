@@ -29,7 +29,7 @@ uint8 KEYPAD_getPressedKey(void){
 #if (KEYPAD_COLUMNS_NUM==4)
 	GPIO_setupPinDirection(KEYPAD_COLUMN_PORT,KEYPAD_FIRST_PIN_COLUMN+3,PIN_INPUT);
 #endif
-while(1){/*دايما بيتشيك عشان انت بطئ عقبال ما تدوس ممكن يكون عدي التشيك بتاع الكولوم خلاص ف محطها ف وايل عشان يرجع يتشيك تاني ويجيبك*/
+while(1){
 	for(KEYPAD_raw_loop=0;KEYPAD_raw_loop<KEYPAD_RAWS_NUM;KEYPAD_raw_loop++){
 		GPIO_setupPinDirection(KEYPAD_RAW_PORT,KEYPAD_FIRST_PIN_RAW+KEYPAD_raw_loop,PIN_OUTPUT);
 		GPIO_writePin(KEYPAD_RAW_PORT,KEYPAD_FIRST_PIN_RAW+KEYPAD_raw_loop,KEYPAD_BUTTON_PRESSED);
