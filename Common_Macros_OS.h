@@ -11,7 +11,7 @@
 
 #define SET_BIT(REG,BIT) REG|=(1<<BIT)
 #define CLEAR_BIT(REG,BIT) REG&=~(1<<BIT)
-#define GET_BIT(REG,BIT) ((REG&(1<<BIT))>>BIT) /*check if get_bit==1 or get_bit==0 equivalent to bit is set and bit is clear*/
+#define GET_BIT(REG,BIT) ((REG&(1<<BIT))>>BIT) 
 #define TOGGLE_BIT(REG,BIT) REG^=(1<<BIT)
 #define ROR(REG,BIT) (REG = ((REG>>BIT) | (REG<<(8-BIT))))
 #define ROL(REG,BIT) (REG = ((REG<<BIT) | (REG>>(8-BIT))))
